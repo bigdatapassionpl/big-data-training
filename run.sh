@@ -9,8 +9,8 @@ mvn clean install
 
 cd ../kafka-training
 git pull; git push; git status
-mvn clean install
+#mvn clean install
 
 cd ../aws-big-data-ai-training
 git pull; git push; git status
-mvn clean install
+#mvn clean install
