@@ -330,6 +330,18 @@
                 <classifier>hadoop2</classifier>
             </dependency>
 
+            <!-- Apache Commons-->
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.6</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.9</version>
+            </dependency>
+
             <!--Jackson-->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
@@ -524,7 +536,8 @@
             <id>hdp</id>
             <properties>
                 <fs.defaultFS>hdfs://hdp1:8020</fs.defaultFS>
-                <hbase.zookeeper.quorum>hdp1.hortonworks.com,hdp2.hortonworks.com,hdp3.hortonworks.com</hbase.zookeeper.quorum>
+                <hbase.zookeeper.quorum>hdp1.hortonworks.com,hdp2.hortonworks.com,hdp3.hortonworks.com
+                </hbase.zookeeper.quorum>
                 <zookeeper.znode.parent>/hbase-unsecure</zookeeper.znode.parent>
                 <phoenix.connection>jdbc:phoenix:hdp3:/hbase-unsecure</phoenix.connection>
             </properties>
@@ -537,7 +550,8 @@
             <id>hdpoc</id>
             <properties>
                 <fs.defaultFS>hdfs://hdpoc1:8020</fs.defaultFS>
-                <hbase.zookeeper.quorum>hdpoc1.hortonworks.com,hdpoc2.hortonworks.com,hdpoc3.hortonworks.com</hbase.zookeeper.quorum>
+                <hbase.zookeeper.quorum>hdpoc1.hortonworks.com,hdpoc2.hortonworks.com,hdpoc3.hortonworks.com
+                </hbase.zookeeper.quorum>
                 <zookeeper.znode.parent>/hbase-unsecure</zookeeper.znode.parent>
                 <phoenix.connection>jdbc:phoenix:hdpoc3:/hbase-unsecure</phoenix.connection>
             </properties>
@@ -593,5 +607,5 @@
         </repository>
 
     </repositories>
-    
+
 </project>
