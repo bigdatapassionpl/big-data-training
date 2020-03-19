@@ -17,7 +17,7 @@
         <!--https://docs.hortonworks.com/HDPDocuments/HDF3/HDF-3.1.1/bk_release-notes/content/ch_hdf_relnotes.html-->
         <hadoop.version>[3.1.1]</hadoop.version>
         <spark.version>[2.3.2]</spark.version>
-        <kafka.version>[2.2.1]</kafka.version>
+        <kafka.version>[2.1.0]</kafka.version>
         <hive.version>[3.1.0]</hive.version>
         <pig.version>[0.16.0]</pig.version>
         <hbase.version>[2.0.2]</hbase.version>
@@ -44,7 +44,7 @@
 
         <!--Scala-->
         <scala.version>[2.11.8]</scala.version>
-        <scala.binary.version>2.11</scala.binary.version>
+        <scala.binary.version>2.12</scala.binary.version>
 
         <!--Groovy-->
         <groovy.version>2.4.13</groovy.version>
@@ -579,7 +579,7 @@
 
         <repository>
             <id>central</id>
-            <url>http://repo1.maven.org/maven2/</url>
+            <url>https://repo1.maven.org/maven2/</url>
         </repository>
 
         <repository>
