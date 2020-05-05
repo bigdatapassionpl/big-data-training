@@ -29,16 +29,18 @@
         <datanucleus.version>5.1.0-release</datanucleus.version>
         <mrunit.version>1.1.0</mrunit.version>
         <mahout.version>0.9</mahout.version>
-        <avro.version>1.7.7</avro.version>
+        <avro.version>1.9.2</avro.version>
         <cascading.version>3.0.0-wip-60</cascading.version>
 
         <!--Other-->
         <junit.version>4.10</junit.version>
+        <assertj.version>3.15.0</assertj.version>
         <log4j.version>2.11.0</log4j.version>
         <slf4j.version>1.7.25</slf4j.version>
         <jackson.version>2.10.0.pr1</jackson.version>
 
         <!-- Java 8 -->
+        <java.version>1.8</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
@@ -343,6 +345,13 @@
                 <version>3.9</version>
             </dependency>
 
+            <!-- Google Guava -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>29.0-jre</version>
+            </dependency>
+
             <!--Jackson-->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
@@ -405,7 +414,7 @@
             <dependency>
                 <groupId>org.assertj</groupId>
                 <artifactId>assertj-core</artifactId>
-                <version>1.7.0</version>
+                <version>${assertj.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -433,6 +442,29 @@
 
         <pluginManagement>
             <plugins>
+
+                <plugin>
+                    <groupId>org.apache.avro</groupId>
+                    <artifactId>avro-maven-plugin</artifactId>
+                    <version>${avro.version}</version>
+                    <executions>
+                        <execution>
+                            <phase>generate-sources</phase>
+                            <goals>
+                                <goal>schema</goal>
+                                <goal>protocol</goal>
+                                <goal>idl-protocol</goal>
+                            </goals>
+                            <configuration>
+                                <sourceDirectory>${project.basedir}/src/main/resources/avro</sourceDirectory>
+                                <stringType>String</stringType>
+                                <createSetters>true</createSetters>
+                                <enableDecimalLogicalType>true</enableDecimalLogicalType>
+                                <fieldVisibility>private</fieldVisibility>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
