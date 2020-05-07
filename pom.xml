@@ -24,6 +24,9 @@
         <oozie.version>[4.3.1]</oozie.version>
         <nifi.version>[1.5.0]</nifi.version>
 
+        <!-- Confluent Platform-->
+        <confluent.version>5.5.0</confluent.version>
+
         <!--Other-->
         <phoenix.version>4.4.0-HBase-1.1</phoenix.version>
         <datanucleus.version>5.1.0-release</datanucleus.version>
@@ -283,6 +286,11 @@
                 <groupId>org.apache.kafka</groupId>
                 <artifactId>kafka-streams</artifactId>
                 <version>${kafka.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.confluent</groupId>
+                <artifactId>kafka-avro-serializer</artifactId>
+                <version>${confluent.version}</version>
             </dependency>
 
             <!--NiFi-->
@@ -631,6 +639,11 @@
             <id>hortonworks-snapshots</id>
             <name>Hortonworks Snapshots Repository</name>
             <url>http://repo.hortonworks.com/content/repositories/snapshots/</url>
+        </repository>
+
+        <repository>
+            <id>confluent</id>
+            <url>http://packages.confluent.io/maven/</url>
         </repository>
 
         <!--Cascading repository-->
