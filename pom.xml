@@ -25,7 +25,7 @@
         <nifi.version>[1.5.0]</nifi.version>
 
         <!-- Confluent Platform-->
-        <confluent.version>5.5.0</confluent.version>
+        <confluent.version>[6.0.1]</confluent.version>
 
         <!--Other-->
         <phoenix.version>4.4.0-HBase-1.1</phoenix.version>
@@ -290,6 +290,11 @@
             <dependency>
                 <groupId>io.confluent</groupId>
                 <artifactId>kafka-avro-serializer</artifactId>
+                <version>${confluent.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.confluent</groupId>
+                <artifactId>kafka-streams-avro-serde</artifactId>
                 <version>${confluent.version}</version>
             </dependency>
 
