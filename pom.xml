@@ -20,7 +20,7 @@
         <kafka.version>[2.1.0]</kafka.version>
         <hive.version>[3.1.0]</hive.version>
         <pig.version>[0.16.0]</pig.version>
-        <hbase.version>[2.0.2]</hbase.version>
+        <hbase.version>[2.4.12]</hbase.version>
         <oozie.version>[4.3.1]</oozie.version>
         <nifi.version>[1.5.0]</nifi.version>
 
@@ -28,7 +28,7 @@
         <confluent.version>[6.0.1]</confluent.version>
 
         <!--Other-->
-        <phoenix.version>4.4.0-HBase-1.1</phoenix.version>
+        <phoenix.version>5.1.2</phoenix.version>
         <datanucleus.version>5.1.0-release</datanucleus.version>
         <mrunit.version>1.1.0</mrunit.version>
         <mahout.version>0.9</mahout.version>
@@ -176,6 +176,12 @@
                 <groupId>org.apache.phoenix</groupId>
                 <artifactId>phoenix-core</artifactId>
                 <version>${phoenix.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.glassfish</groupId>
+                        <artifactId>javax.el</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <!--Kundera for HBase-->
