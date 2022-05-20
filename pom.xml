@@ -345,12 +345,11 @@
                 <artifactId>avro</artifactId>
                 <version>${avro.version}</version>
             </dependency>
-<!--            <dependency>-->
-<!--                <groupId>org.apache.avro</groupId>-->
-<!--                <artifactId>avro-mapred</artifactId>-->
-<!--                <version>${avro.version}</version>-->
-<!--                <classifier>hadoop2</classifier>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>org.apache.avro</groupId>
+                <artifactId>avro-mapred</artifactId>
+                <version>${avro.version}</version>
+            </dependency>
 
             <!-- Apache Commons-->
             <dependency>
@@ -645,21 +644,21 @@
             <url>https://repository.apache.org/content/repositories/releases/</url>
         </repository>
 
-        <repository>
-            <id>hortonworks-releases</id>
-            <name>Hortonworks Releases Repository</name>
-            <url>http://repo.hortonworks.com/content/repositories/releases/</url>
-        </repository>
+<!--        <repository>-->
+<!--            <id>hortonworks-releases</id>-->
+<!--            <name>Hortonworks Releases Repository</name>-->
+<!--            <url>http://repo.hortonworks.com/content/repositories/releases/</url>-->
+<!--        </repository>-->
 
-        <repository>
-            <id>hortonworks-snapshots</id>
-            <name>Hortonworks Snapshots Repository</name>
-            <url>http://repo.hortonworks.com/content/repositories/snapshots/</url>
-        </repository>
+<!--        <repository>-->
+<!--            <id>hortonworks-snapshots</id>-->
+<!--            <name>Hortonworks Snapshots Repository</name>-->
+<!--            <url>http://repo.hortonworks.com/content/repositories/snapshots/</url>-->
+<!--        </repository>-->
 
         <repository>
             <id>confluent</id>
-            <url>http://packages.confluent.io/maven/</url>
+            <url>https://packages.confluent.io/maven/</url>
         </repository>
 
         <!--Cascading repository-->
