@@ -1,5 +1,6 @@
 
 # Big Data Training
+https://github.com/bigdatapassionpl/big-data-training
 
 Parent Maven Repo for other projects:
 * https://github.com/bigdatapassionpl/kafka-training
