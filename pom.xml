@@ -459,6 +459,19 @@
         </dependencies>
     </dependencyManagement>
 
+    <distributionManagement>
+        <repository>
+            <id>radek-maven-repo-release</id>
+            <name>AWS S3 Release Repository</name>
+            <url>s3://radek-maven-repo/release</url>
+        </repository>
+        <snapshotRepository>
+            <id>radek-maven-repo-snapshot</id>
+            <name>AWS S3 Snapshot Repository</name>
+            <url>s3://radek-maven-repo/snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <build>
 
         <resources>
@@ -471,6 +484,14 @@
                 <filtering>true</filtering>
             </resource>
         </resources>
+
+        <extensions>
+            <extension>
+                <groupId>org.springframework.build</groupId>
+                <artifactId>aws-maven</artifactId>
+                <version>5.0.0.RELEASE</version>
+            </extension>
+        </extensions>
 
         <pluginManagement>
             <plugins>
@@ -653,17 +674,17 @@
             <url>https://repository.apache.org/content/repositories/releases/</url>
         </repository>
 
-<!--        <repository>-->
-<!--            <id>hortonworks-releases</id>-->
-<!--            <name>Hortonworks Releases Repository</name>-->
-<!--            <url>http://repo.hortonworks.com/content/repositories/releases/</url>-->
-<!--        </repository>-->
+        <!--        <repository>-->
+        <!--            <id>hortonworks-releases</id>-->
+        <!--            <name>Hortonworks Releases Repository</name>-->
+        <!--            <url>http://repo.hortonworks.com/content/repositories/releases/</url>-->
+        <!--        </repository>-->
 
-<!--        <repository>-->
-<!--            <id>hortonworks-snapshots</id>-->
-<!--            <name>Hortonworks Snapshots Repository</name>-->
-<!--            <url>http://repo.hortonworks.com/content/repositories/snapshots/</url>-->
-<!--        </repository>-->
+        <!--        <repository>-->
+        <!--            <id>hortonworks-snapshots</id>-->
+        <!--            <name>Hortonworks Snapshots Repository</name>-->
+        <!--            <url>http://repo.hortonworks.com/content/repositories/snapshots/</url>-->
+        <!--        </repository>-->
 
         <repository>
             <id>confluent</id>
