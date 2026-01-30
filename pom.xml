@@ -16,7 +16,7 @@
         <!--https://docs.hortonworks.com/HDPDocuments/HDP3/HDP-3.1.0/release-notes/content/comp_versions.html-->
         <!--https://docs.hortonworks.com/HDPDocuments/HDF3/HDF-3.1.1/bk_release-notes/content/ch_hdf_relnotes.html-->
         <hadoop.version>[3.1.1]</hadoop.version>
-        <spark.version>[2.4.0]</spark.version>
+        <spark.version>[4.0.0]</spark.version>
         <kafka.version>[3.3.1]</kafka.version>
         <hive.version>[3.1.0]</hive.version>
         <pig.version>[0.16.0]</pig.version>
@@ -43,13 +43,13 @@
         <jackson.version>2.10.0.pr1</jackson.version>
 
         <!-- Java -->
-        <java.version>11</java.version>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
 
         <!--Scala-->
-        <scala.version>[2.12.7]</scala.version>
-        <scala.binary.version>2.12</scala.binary.version>
+        <scala.version>2.13.15</scala.version>
+        <scala.binary.version>2.13</scala.binary.version>
 
         <!--Groovy-->
         <groovy.version>2.4.13</groovy.version>
@@ -60,7 +60,7 @@
 
         <!--Maven-->
         <maven-assembly-plugin.version>3.1.0</maven-assembly-plugin.version>
-        <scala-maven-plugin.version>3.3.1</scala-maven-plugin.version>
+        <scala-maven-plugin.version>4.9.2</scala-maven-plugin.version>
         <versions-maven-plugin.version>2.5</versions-maven-plugin.version>
 
     </properties>
@@ -396,7 +396,7 @@
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>3.9</version>
+                <version>3.14.0</version>
             </dependency>
 
             <!-- Google Guava -->
